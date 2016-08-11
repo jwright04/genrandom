@@ -1,0 +1,29 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+/coverage
+/.nyc_output
+
+# dependencies
+/node_modules
+/bower_components
+
+# misc
+/.sass-cache
+/connect.lock
+/coverage/*
+/libpeerconnection.log
+npm-debug.log
+testem.log
+
+.idea
+BAK/*
+_admin/*
+BAK
+node_modules/
+.DS_Store
+.sass-cache
+js/.DS_Store
+lib/
