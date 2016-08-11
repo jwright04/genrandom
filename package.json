@@ -1,7 +1,7 @@
 {
   "name": "genrandom",
   "description": "genrandom (generate random) is a (numeric or alpha numeric) generator by length and segments",
-  "main": "dist/randomly.js",
+  "main": "dist/genrandom.js",
   "version": "0.0.0-semantically-released",
   "scripts": {
     "commit": "git-cz",
@@ -10,13 +10,13 @@
     "watch:test": "npm t -- -w",
     "prebuild": "rimraf dist",
     "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
-    "test": "mocha src/randomly.test.js --compilers js:babel-register",
+    "test": "mocha src/genrandom.test.js --compilers js:babel-register",
     "cover":"nyc npm t",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jwright04/randomly.git"
+    "url": "https://github.com/jwright04/genrandom.git"
   },
   "keywords": [
     "random",
