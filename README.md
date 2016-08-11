@@ -62,4 +62,4 @@ If you find any issues or see something that can be improved?
 
 
 ### License
-ISC
+MIT
