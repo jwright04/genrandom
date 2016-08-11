@@ -4,9 +4,8 @@
  * @private
  */
 let maxLength = () => {
-
     return 20;
-}
+};
 
 /**
  * Generates the random number
@@ -17,9 +16,8 @@ let randomNumberGenerator = (length) => {
     if (length > maxLength()) {
         length = maxLength();
     }
-
     return Math.floor(Math.pow(10, length - 1) + Math.random() * 9 * Math.pow(10, length - 1))
-}
+};
 
 /**
  * Generates the random number character combination
@@ -27,16 +25,16 @@ let randomNumberGenerator = (length) => {
  * @private
  */
 let randomNumberCharacterGenerator = (length) => {
-
-    let possibleNumCharCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let possibleNumbers = "0123456789";
+    let possibleLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let possibleNumCharCharacters = (randomNumberChooser === "rChar") ? `${possibleLetters}${possibleLetters.toLowerCase()}` : `${possibleLetters}${possibleLetters.toLowerCase()}${possibleNumbers}`;
     let text = "";
 
     for( var i=0; i < length; i++ ){
         text += possibleNumCharCharacters.charAt(Math.floor(Math.random() * possibleNumCharCharacters.length));
     }
-
     return text;
-}
+};
 
 /**
  * Sets the type of random value being generated (number or number/characters)
@@ -50,23 +48,27 @@ let randomNumberChooser = null;
  * @type {Function}
  * @private
  */
-let decideRandomNumberTransformation = (argumentsObj) => {
-
+let decideRandomValueTransformation = (argumentsObj) => {
     let segmentLength = argumentsObj.length;
     let finalNumber   = "";
 
-
     if (segmentLength === 1) {
 
-        return (randomNumberChooser === "rNumber") ? randomNumberGenerator(argumentsObj[0]) : randomNumberCharacterGenerator(argumentsObj[0]);
+        switch(randomNumberChooser){
+            case "rNumber":
+                return randomNumberGenerator(argumentsObj[0]);
+            case 'rNumChar':
+                return randomNumberCharacterGenerator(argumentsObj[0]);
+            default:
+                return randomNumberCharacterGenerator(argumentsObj[0]);
+        }
     }
 
     for ( var i = 0 ; i < segmentLength ; i++ ) {
-
         finalNumber += `-${(randomNumberChooser === "rNumber") ? randomNumberGenerator(argumentsObj[i]) : randomNumberCharacterGenerator(argumentsObj[i])}`;
     }
     return finalNumber.substr(1);
-}
+};
 
 /**
  * A function that returns a random number
@@ -74,10 +76,9 @@ let decideRandomNumberTransformation = (argumentsObj) => {
  * @public
  */
 export function rNumber (...args) {
-
-    let passedArgumnets = arguments;
+    let passedArguments = arguments;
     randomNumberChooser = "rNumber";
-    return decideRandomNumberTransformation(passedArgumnets);
+    return decideRandomValueTransformation(passedArguments);
 }
 
 /**
@@ -86,8 +87,18 @@ export function rNumber (...args) {
  * @public
  */
 export function rNumChar(...args){
-
     let passedArguments = arguments;
     randomNumberChooser = "rNumChar";
-    return decideRandomNumberTransformation(passedArguments);
+    return decideRandomValueTransformation(passedArguments);
+}
+
+/**
+ * A function that returns a random string of characters with no numbers
+ * @type {Function}
+ * @public
+ */
+export function rChar(...args){
+    let passedArguments = arguments;
+    randomNumberChooser = "rChar";
+    return decideRandomValueTransformation(passedArguments);
 }
