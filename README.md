@@ -5,7 +5,7 @@
 
 ## Description
 
-A custom random number generator.
+genrandom (generate random) is a (numeric or alpha numeric) generator by length and segments — Edit
 
 ### Installation
 
