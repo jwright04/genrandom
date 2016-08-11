@@ -55,6 +55,20 @@ rNumChar(10, 2, 3) // <= mW13MGs4Vh-pq-Itb
 type of rNumChar(10, 2, 3) // <= string
 ```
 
+#### Return a string containing characters only
+```
+rChar(5) // <= JdgBR
+```
+
+```
+type of rChar(5) // <= string
+```
+
+#### Return a string containing characters with multiple segments
+```
+rChar(5, 6, 3) // <= izMEm-TmeOFQ-JPH
+```
+
 
 ### Improvements and Bugs
 If you find any issues or see something that can be improved? 
