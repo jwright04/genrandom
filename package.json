@@ -2,6 +2,7 @@
   "name": "genrandom",
   "description": "genrandom (generate random) is a (numeric or alpha numeric) generator by length and segments",
   "main": "dist/genrandom.js",
+  "version": "1.0.1",
   "scripts": {
     "commit": "git-cz",
     "check-coverage": "nyc check-coverage --statements 20 --branches 20 --functions 20 --lines 20",
