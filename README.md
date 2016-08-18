@@ -26,7 +26,7 @@ rNumber(10) // <= 8210706073
 ```
 
 ```
-type of rNumber(10) // <= number
+typeof rNumber(10) // <= number
 ```
 
 #### Return a string of random numbers with multiple segments
@@ -35,7 +35,7 @@ rNumber(3, 3, 10) // <= 615-807-8046602819
 ```
 
 ```
-type of rNumber(3, 3, 10) // <= string
+typeof rNumber(3, 3, 10) // <= string
 ```
 #### Return a string containing numbers and characters
 ```
@@ -43,7 +43,7 @@ rNumChar(10) // <= wUDMJd1BRH
 ```
 
 ```
-type of rNumChar(10) // <= string
+typeof rNumChar(10) // <= string
 ```
 
 #### Return a string containing numbers and characters with multiple segments
@@ -52,7 +52,7 @@ rNumChar(10, 2, 3) // <= mW13MGs4Vh-pq-Itb
 ```
 
 ```
-type of rNumChar(10, 2, 3) // <= string
+typeof rNumChar(10, 2, 3) // <= string
 ```
 
 #### Return a string containing characters only
@@ -61,7 +61,7 @@ rChar(5) // <= JdgBR
 ```
 
 ```
-type of rChar(5) // <= string
+typeof rChar(5) // <= string
 ```
 
 #### Return a string containing characters with multiple segments
