@@ -23,7 +23,9 @@
     "numeric",
     "alpha",
     "number",
-    "generator"
+    "generator",
+    "randomly",
+    "randomizer"
   ],
   "files": [
     "dist",
