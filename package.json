@@ -11,6 +11,7 @@
     "prebuild": "rimraf dist",
     "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
     "test": "mocha src/genrandom.test.js --compilers js:babel-register",
+    "start": "npm run test",
     "cover": "nyc npm t",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
