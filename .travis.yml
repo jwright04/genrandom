@@ -9,9 +9,9 @@ branches:
 notifications:
   email: false
 node_js:
-  - '4'
+  - 4
 before_install:
-  - npm i -g npm@^2.0.0
+  - npm i -g npm@^3.0.0
 before_script:
   - npm prune
 script:
@@ -21,4 +21,3 @@ script:
 after_success:
   - npm run report-coverage
   - npm run semantic-release
-  - bash <(curl -s https://codecov.io/bash)
