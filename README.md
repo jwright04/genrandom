@@ -1,6 +1,8 @@
 # GenRandom
 [![travis build](https://img.shields.io/travis/jwright04/genrandom.svg?style=flat-square)](https://travis-ci.org/jwright04/genrandom/builds)
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://en.wikipedia.org/wiki/MIT_License)
+[![codecov](https://codecov.io/gh/jwright04/genrandom/branch/master/graph/badge.svg)](https://codecov.io/gh/jwright04/genrandom)
+
 
 
 ## Description
