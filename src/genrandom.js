@@ -27,7 +27,16 @@ let randomNumberGenerator = (length) => {
 let randomNumberCharacterGenerator = (length) => {
     let possibleNumbers = "0123456789";
     let possibleLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let possibleSymbols = "~!@#$%^&*()+=?<>{}[]";
     let possibleNumCharCharacters = (randomNumberChooser === "rChar") ? `${possibleLetters}${possibleLetters.toLowerCase()}` : `${possibleLetters}${possibleLetters.toLowerCase()}${possibleNumbers}`;
+
+    if(randomNumberChooser === "rChar"){
+        possibleNumCharCharacters = `${possibleLetters}${possibleLetters.toLowerCase()}`;
+    } else if (randomNumberChooser === "rNumCharSymbol"){
+        possibleNumCharCharacters = `${possibleLetters}${possibleLetters.toLowerCase()}${possibleSymbols}${possibleNumbers}`;
+    } else {
+        possibleNumCharCharacters = `${possibleLetters}${possibleLetters.toLowerCase()}${possibleNumbers}`;
+    }
     let text = "";
 
     for( var i=0; i < length; i++ ){
@@ -58,6 +67,8 @@ let decideRandomValueTransformation = (argumentsObj) => {
             case "rNumber":
                 return randomNumberGenerator(argumentsObj[0]);
             case 'rNumChar':
+                return randomNumberCharacterGenerator(argumentsObj[0]);
+            case 'rNumCharSymbol':
                 return randomNumberCharacterGenerator(argumentsObj[0]);
             default:
                 return randomNumberCharacterGenerator(argumentsObj[0]);
@@ -100,5 +111,12 @@ export function rNumChar(...args){
 export function rChar(...args){
     let passedArguments = arguments;
     randomNumberChooser = "rChar";
+    return decideRandomValueTransformation(passedArguments);
+}
+
+export function rNumCharSymbol(...args){
+
+    let passedArguments = arguments;
+    randomNumberChooser = "rNumCharSymbol";
     return decideRandomValueTransformation(passedArguments);
 }
