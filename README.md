@@ -3,8 +3,8 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://en.wikipedia.org/wiki/MIT_License)
 [![codecov](https://codecov.io/gh/jwright04/genrandom/branch/master/graph/badge.svg)](https://codecov.io/gh/jwright04/genrandom)
 [![version](https://img.shields.io/npm/v/genrandom.svg?style=flat-square)](http://npm.im/genrandom)
-[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 [![downloads](https://img.shields.io/npm/dm/genrandom.svg?style=flat-square)](http://npm-stat.com/charts.html?package=genrandom&from=2016-08-11)
+[![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 
 
 

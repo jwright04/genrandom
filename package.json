@@ -9,7 +9,7 @@
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "watch:test": "npm t -- -w",
     "prebuild": "rimraf dist",
-    "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
+    "build": "babel --copy-files --out-dir dist --ignore *.test.js src --no-comments",
     "test": "mocha src/genrandom.test.js --compilers js:babel-register",
     "start": "npm run test",
     "cover": "nyc npm t",
