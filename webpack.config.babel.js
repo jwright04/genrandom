@@ -1,30 +1,19 @@
-'use strict';
+import {join} from 'path'
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
+const include = join(__dirname, 'src')
 
-var _path = require('path');
-
-var include = (0, _path.join)(__dirname, 'src');
-
-exports.default = {
+export default {
     entry: './src/genrandom',
     output: {
-        path: (0, _path.join)(__dirname, 'dist'),
+        path: join(__dirname, 'dist'),
         libraryTarget: 'umd',
-        library: 'genrandom'
+        library: 'genrandom',
     },
     devtool: 'source-map',
     module: {
-        loaders: [{
-            test: /\.js$/,
-            loader: 'babel',
-            include: include
-        }, {
-            test: /\.json$/,
-            loader: 'json',
-            include: include
-        }]
+        loaders: [
+            {test: /\.js$/, loader: 'babel', include},
+            {test: /\.json$/, 'loader': 'json', include},
+        ]
     }
-};
+}
