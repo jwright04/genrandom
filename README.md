@@ -85,6 +85,27 @@ rNumCharSymbol(5) // <= 8V!<#
 rNumCharSymbol(5, 8, 12) // <= +<GPE-OHf3aS&&-kh)@IhYVdD2}
 ```
 
+### Using genrandom in a browser
+Include the genrandom script into your html:
+
+```
+'<script src="https://npmcdn.com/genrandom/dist/umd.js"></script>'
+``` 
+
+or use the minified version
+
+```
+'<script src="https://npmcdn.com/genrandom/dist/umd.min.js"></script>'
+```
+
+Call it:
+
+```
+'<script>
+     var newRandomNumber = genrandom.rNumber(10, 5, 8);
+     console.log("Random Number", newRandomNumber); // <= 2374867366-80085-23113014
+</script>'
+```
 
 ### Improvements and Bugs
 If you find any issues or see something that can be improved?
