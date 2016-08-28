@@ -12,8 +12,22 @@ export default {
     devtool: 'source-map',
     module: {
         loaders: [
-            {test: /\.js$/, loader: 'babel', include},
-            {test: /\.json$/, 'loader': 'json', include},
+            {
+                test: /\.js$/,
+                loader: 'babel',
+                include,
+                query: {
+                    presets: ['es2015', 'stage-2']
+                }
+            },
+            {
+                test: /\.json$/,
+                loader: 'json',
+                include,
+                query: {
+                    presets: ['es2015', 'stage-2']
+                }
+            },
         ]
-    }
+    },
 }
