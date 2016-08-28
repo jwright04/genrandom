@@ -60,6 +60,10 @@
     "semantic-release": "^4.3.5",
     "webpack": "1.13.2"
   },
+  "engines": {
+    "node": "6.x",
+    "npm": "3.x"
+  },
   "czConfig": {
     "path": "node_modules/cz-conventional-changelog"
   },
