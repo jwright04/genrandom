@@ -8,7 +8,7 @@
     "check-coverage": "nyc check-coverage --statements 20 --branches 20 --functions 20 --lines 20",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "watch:test": "npm t -- -w",
-    "prebuild": "rimraf dist",
+    "prebuild": "rimraf dist && rimraf umd",
     "build": "npm-run-all --parallel build:*",
     "build:main": "babel --copy-files --out-dir dist --ignore *.test.js src --no-comments",
     "build:umd": "webpack --output-filename genrandom.umd.js",
@@ -34,6 +34,7 @@
   ],
   "files": [
     "dist",
+    "umd",
     "README.md"
   ],
   "author": "James C. Wright <me@jamescwright.com> (http://jamescwright.com/)",

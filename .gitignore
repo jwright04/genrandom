@@ -2,6 +2,7 @@
 
 # compiled output
 /dist
+/umd
 /tmp
 /coverage
 /.nyc_output
