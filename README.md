@@ -89,13 +89,13 @@ rNumCharSymbol(5, 8, 12) // <= +<GPE-OHf3aS&&-kh)@IhYVdD2}
 Include the genrandom script into your html:
 
 ```
-'<script src="https://npmcdn.com/genrandom/dist/umd.js"></script>'
+'<script src="https://npmcdn.com/genrandom/umd/genrandom.umd.js"></script>'
 ``` 
 
 or use the minified version
 
 ```
-'<script src="https://npmcdn.com/genrandom/dist/umd.min.js"></script>'
+'<script src="https://npmcdn.com/genrandom/umd/genrandom.umd.min.js"></script>'
 ```
 
 Call it:

@@ -11,7 +11,7 @@ var include = (0, _path.join)(__dirname, 'src');
 exports.default = {
     entry: './src/genrandom',
     output: {
-        path: (0, _path.join)(__dirname, 'dist'),
+        path: (0, _path.join)(__dirname, 'umd'),
         libraryTarget: 'umd',
         library: 'genrandom'
     },
