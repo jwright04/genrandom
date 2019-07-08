@@ -107,6 +107,10 @@ Call it:
 </script>'
 ```
 
+### Coming...
+Random Name Generation
+
+
 ### Improvements and Bugs
 If you find any issues or see something that can be improved?
 <https://github.com/jwright04/genrandom/issues>
