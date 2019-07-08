@@ -39,7 +39,7 @@ let randomNumberCharacterGenerator = (length) => {
     }
     let text = "";
 
-    for( var i=0; i < length; i++ ){
+    for ( let i = 0; i < length; i++ ){
         text += possibleNumCharCharacters.charAt(Math.floor(Math.random() * possibleNumCharCharacters.length));
     }
     return text;
@@ -75,7 +75,7 @@ let decideRandomValueTransformation = (argumentsObj) => {
         }
     }
 
-    for ( var i = 0 ; i < segmentLength ; i++ ) {
+    for ( let i = 0 ; i < segmentLength ; i++ ) {
         finalNumber += `-${(randomNumberChooser === "rNumber") ? randomNumberGenerator(argumentsObj[i]) : randomNumberCharacterGenerator(argumentsObj[i])}`;
     }
     return finalNumber.substr(1);
@@ -114,6 +114,11 @@ export function rChar(...args){
     return decideRandomValueTransformation(passedArguments);
 }
 
+/**
+ * A function that returns a random string of characters numbers and symbols
+ * @type {Function}
+ * @public
+ */
 export function rNumCharSymbol(...args){
 
     let passedArguments = arguments;
