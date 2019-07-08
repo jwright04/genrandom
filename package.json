@@ -60,7 +60,8 @@
     "nyc": "14.1.1",
     "rimraf": "2.6.3",
     "semantic-release": "^15.13.18",
-    "webpack": "4.35.2"
+    "webpack": "4.35.2",
+    "webpack-cli": "3.3.5"
   },
   "engines": {
     "node": "10.16.x",
