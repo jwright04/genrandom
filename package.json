@@ -84,7 +84,6 @@
     ]
   },
   "release": {
-    "branch": "next",
     "prepare": [
       "@semantic-release/changelog",
       "@semantic-release/npm",
