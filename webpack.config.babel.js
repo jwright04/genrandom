@@ -1,6 +1,6 @@
 import {join} from 'path'
 
-const include = join(__dirname, 'src')
+const include = join(__dirname, 'src');
 
 export default {
     entry: './src/genrandom',
@@ -11,9 +11,9 @@ export default {
     },
     devtool: 'source-map',
     module: {
-        loaders: [
-            {test: /\.js$/, loader: 'babel', include},
-            {test: /\.json$/, 'loader': 'json', include},
+        rules: [
+
         ]
-    }
+    },
+    mode: 'production',
 }
